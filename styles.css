@@ -182,10 +182,14 @@ button:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 50px;
+    padding: 46px;
     border-width: 2px;
-    gap: 460px;
-    justify-content: center;
+    gap: 449px;
+    justify-content: space-around;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 #finalWinner { 
