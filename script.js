@@ -40,6 +40,7 @@ let playerScore = 0
 function countScore() { 
     if (computerScore === 5) { 
        winnerDeclaration.textContent=" COMPUTER WINS"
+       winnerDeclaration.classList.add('grow'); 
         titleContainer.remove(); 
         buttonsContainer.remove(); 
         resultsContainer.remove();
@@ -58,6 +59,7 @@ function countScore() {
         
     } else if (playerScore === 5) { 
         winnerDeclaration.textContent="You win!!!"
+        winnerDeclaration.classList.add('grow'); 
         titleContainer.remove(); 
         buttonsContainer.remove(); 
         resultsContainer.remove();

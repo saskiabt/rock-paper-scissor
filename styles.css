@@ -215,3 +215,19 @@ button:hover {
 #containers { 
     padding-top: 50px;
 }
+
+.grow { 
+    animation: growth 1.5s;
+    animation-fill-mode: backwards;
+    font-size: 3rem; 
+    }
+
+@keyframes growth {
+    0% { 
+        font-size: 0;
+    }
+    100% { 
+        font-size: 3rem;
+    }
+}
+    
