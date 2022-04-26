@@ -20,20 +20,24 @@ body {
     font-family: "ProvidenceSansPro";
     src:url(/Users/saskiabinder/Library/Fonts/ProvidenceSansRegular.ttf)
 }
+
+#header { 
+    color: #F7F7F7;
+    display: flex;
+    gap: 90px;
+    flex-direction: column;
+
+}
+
 #titleContainer { 
+    font-size: x-large;
     color: #F7F7F7;
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
+    margin-top: 80px;
     align-items: center;
-
-    padding-top: 30px;
     font-family: "ProvidenceSansPro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 115px;
 }
 
 .rotated { 
@@ -118,7 +122,6 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
     padding-top: auto;
     color: burlywood;
 
@@ -183,15 +186,15 @@ button:hover {
 }
 
 #description {
-font-family: "roboto-mono",monospace;
- display: flex;
- padding-left: 106px;
- font-stretch: 200%;
- font-family: "ProvidenceSansPro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- transform: rotate(-13deg);
-    padding-bottom: 80px;
- color: #e4baba;
- padding-top: 40px;
+    font-size: x-large;
+    display: block;
+    padding-left: 106px;
+    font-stretch: 200%;
+    font-family: "ProvidenceSansPro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: rotate(-13deg);
+    padding-bottom: 15px;
+    color: #e4baba;
+    padding-top: 40px;
 }
 
 .containers { 
