@@ -24,6 +24,7 @@ let finalWinner = document.getElementById('finalWinner');
 let winnerDeclaration = document.createElement('div')
 winnerDeclaration.classList.add('winnerDeclaration')
 finalWinner.appendChild(winnerDeclaration); 
+let description = document.getElementById('description');
 
 
 function computerPlay() {
@@ -42,6 +43,7 @@ function countScore() {
         titleContainer.remove(); 
         buttonsContainer.remove(); 
         resultsContainer.remove();
+        description.remove(); 
 
         let playAgainContainer = document.createElement('div'); 
         document.getElementById("finalWinner").appendChild(playAgainContainer); 
@@ -59,6 +61,7 @@ function countScore() {
         titleContainer.remove(); 
         buttonsContainer.remove(); 
         resultsContainer.remove();
+        description.remove(); 
 
         let playAgainContainer = document.createElement('div'); 
         document.getElementById("finalWinner").appendChild(playAgainContainer); 
