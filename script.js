@@ -137,6 +137,7 @@ function playRound(playerSelection) {
         playerSelectionBox.textContent = `You selected ${playerSelection}`; 
 
         if (computerSelection === 'scissors') { 
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
             winnerContainer.textContent= 'You tied. Play again.'; 
         } else if (computerSelection === 'paper') { 
             computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
