@@ -3,6 +3,29 @@
 // STILL TO BE DONE : FIX BUG WHERE CANCEL DOESN'T EXIT THE LOOP / RN CANCEL WILL JUST BRING UP THE PROMPT AGAIN AND YOU HAVE TO PLAY UNTIL SOMEONE GETS TO 5 TO EXIT 
 
 // FUNCTION TO PICK COMPUTER CHOICE 
+
+let rockButton = document.getElementById('rock'); 
+let paperButton = document.getElementById('paper'); 
+let scissorsButton = document.getElementById('scissors'); 
+
+let playerSelectionBox = document.createElement('div');    
+document.getElementById("selections").appendChild(playerSelectionBox);
+
+let computerSelectionBox = document.createElement('div'); 
+ document.getElementById("selections").appendChild(computerSelectionBox); 
+
+let winnerContainer = document.getElementById('winnerContainer'); 
+document.getElementById("resultsContainer").appendChild(winnerContainer); 
+
+
+let titleContainer = document.getElementById('titleContainer'); 
+let resultsContainer = document.getElementById('resultsContainer'); 
+let finalWinner = document.getElementById('finalWinner'); 
+let winnerDeclaration = document.createElement('div')
+winnerDeclaration.classList.add('winnerDeclaration')
+finalWinner.appendChild(winnerDeclaration); 
+
+
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors']; 
     let random = Math.floor(Math.random()*3)
@@ -10,100 +33,141 @@ function computerPlay() {
     return computerChoice
 } 
 
-
 let computerScore = 0
 let playerScore = 0 
+
+function countScore() { 
+    if (computerScore === 5) { 
+       winnerDeclaration.textContent=" COMPUTER WINS"
+        titleContainer.remove(); 
+        buttonsContainer.remove(); 
+        resultsContainer.remove();
+
+        let playAgainContainer = document.createElement('div'); 
+        document.getElementById("finalWinner").appendChild(playAgainContainer); 
+        let playAgainButton = document.createElement('button'); 
+        playAgainContainer.appendChild(playAgainButton); 
+        playAgainContainer.classList.add('playAgainContainer'); 
+        playAgainButton.textContent= "Play again?"
+        playAgainButton.classList.add('playButton');
+        playAgainButton.addEventListener('click', () =>{ 
+            window.location.reload(); 
+        })
+        
+    } else if (playerScore === 5) { 
+        winnerDeclaration.textContent="You win!!!"
+        titleContainer.remove(); 
+        buttonsContainer.remove(); 
+        resultsContainer.remove();
+
+        let playAgainContainer = document.createElement('div'); 
+        document.getElementById("finalWinner").appendChild(playAgainContainer); 
+        let playAgainButton = document.createElement('button'); 
+        playAgainContainer.appendChild(playAgainButton); 
+        playAgainContainer.classList.add('playAgainContainer'); 
+        playAgainButton.textContent= "Play again?"
+        playAgainButton.classList.add('playButton');
+        playAgainButton.addEventListener('click', () =>{ 
+            window.location.reload(); 
+        })
+    }
+}
 
 
 
 function playRound(playerSelection) { 
-    const computerSelection = computerPlay()
-    let validSelection
-
-    if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
-        validSelection = true
-        }
-
-    if (validSelection === true) { 
-        console.log(`Player selection is ${playerSelection}`) 
-        console.log(`Computer selection is ${computerSelection}`) 
-        }
-    
     // IF PLAYER SELECTS ROCK // 
-    if ( playerSelection === 'rock') {  
-             if (computerSelection === 'scissors') { 
-                 console.log('You win! Rock beats scissors')
-                 playerScore ++ ; 
-          
-             } else if (computerSelection === 'paper') { 
-                console.log('You Lose! Paper Beats Rock')
-                 computerScore ++ 
-              
-            } else if (computerSelection === 'rock') { 
-                 console.log('Tie! Rock vs. Rock.')
-                 }
-        // IF PLAYER SELECTS PAPER // 
-        } else if (playerSelection === 'paper') { 
-                if (computerSelection === 'scissors') {
-                    console.log( 'You Lose! Scissors beats paper')
-                    computerScore ++ 
-                } else if (computerSelection === 'paper') { 
-                    console.log('You tied!')
-                } else if (computerSelection === 'rock') { 
-                    console.log( 'You win! Paper beats rock!')
-                    playerScore ++ 
-                }
-    // IF PLAYER SELECTS SCISSORS // 
-        } else if (playerSelection === 'scissors') {
-                if (computerSelection === 'scissors') { 
-                    console.log( 'You tied. Scissors vs Scissors. Try Again')
-                } else if (computerSelection === 'paper') { 
-                    console.log( ' You win! Scissors beats paper.')
-                    playerScore ++
-                } else if (computerSelection === 'rock') { 
-                   console.log(  'You lose! Rock beats scissors') 
-                    computerScore ++
-                }
-        } else if (playerSelection === null) { 
-            return;
-        }
+    rockButton.addEventListener('click', () => { 
+        const computerSelection = computerPlay(); 
+        let playerSelection = 'rock'
+        playerSelectionBox.textContent = `You selected 
+        ${playerSelection}`
+        if (computerSelection === 'scissors') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`
+            winnerContainer.textContent = `You win! Rock beats scissors.`
+            playerScore ++ ; 
      
-    if (validSelection === true) { 
-        console.log(`Player's score is ${playerScore} ; Computer's score is ${computerScore}`)
-    } 
-}
+        } else if (computerSelection === 'paper') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`
+            winnerContainer.textContent = "You Lose! Paper Beats Rock"; 
+            computerScore ++ 
+         
+       } else if (computerSelection === 'rock') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`
+            winnerContainer.textContent = "You tied. Play again."
+        }
+
+        playerScoreCard.textContent = `Player's score: ${playerScore}`
+        computerScoreCard.textContent = `Computer's score: ${computerScore}`
+        countScore(); 
+    }); 
+
+
+    paperButton.addEventListener('click', () => {
+        const computerSelection = computerPlay(); 
+        let playerSelection = 'paper'
+        playerSelectionBox.textContent = `You selected ${playerSelection}`
+
+        if (computerSelection === 'scissors') {
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            winnerContainer.textContent= 'You Lose! Scissors beats paper'; 
+            computerScore ++ ; 
+
+        } else if (computerSelection === 'paper') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            winnerContainer.textContent= 'You tied. Play again.'; 
     
-
-
-
-function playGameDos() {
-        const consoleStyle = 'color:pink; font-size:20px ; font-weight:bold;' 
-        console.log('%c You are going to play a best of five game of Rock / Paper / Scissors against the computer. First to 3 points wins.', consoleStyle);
-
-        while (computerScore<3 && playerScore<3) { 
-           let playerSelection = prompt('Choose rock paper or scissors')
-           playerSelection = playerSelection.toLowerCase() 
-                
-
-            if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
-                console.log('')
-                playRound(playerSelection); 
-             } else { 
-                playerSelection = prompt("Please enter a valid input and try again.")
-                playRound(playerSelection);
-            } 
+        } else if (computerSelection === 'rock') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            winnerContainer.textContent= 'You win! Paper beats rock!'; 
+            playerScore ++ ; 
         }
         
-                
-        if (playerScore === 3) { // declares winner at first to 3 points 
-            console.log(`%c You Win!
-                `, consoleStyle)
-            } else if (computerScore === 3) { 
-                console.log(`%c You lost. The computer won.
-                `, consoleStyle)
-            }
-    
-    }
- 
+        playerScoreCard.textContent = `Player's score: ${playerScore}`
+        computerScoreCard.textContent = `Computer's score: ${computerScore}`
+        countScore(); 
+    }); 
 
- playGameDos()
+    scissorsButton.addEventListener('click', () => {
+        const computerSelection = computerPlay(); 
+        let playerSelection = 'scissors'; 
+        playerSelectionBox.textContent = `You selected ${playerSelection}`; 
+
+        if (computerSelection === 'scissors') { 
+            winnerContainer.textContent= 'You tied. Play again.'; 
+        } else if (computerSelection === 'paper') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            winnerContainer.textContent= 'You win! Scissors beats paper.'; 
+            playerScore ++
+        } else if (computerSelection === 'rock') { 
+            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            winnerContainer.textContent= 'You lose! Rock beats scissors'; 
+            computerScore ++
+        }
+        playerScoreCard.textContent = `Player's score: ${playerScore}`
+        computerScoreCard.textContent = `Computer's score: ${computerScore}`
+        countScore(); 
+
+    });
+
+}
+
+        
+playRound(); 
+
+
+
+let scoreContainer = document.getElementById('scoreContainer'); 
+let playerScoreCard = document.getElementById('playerScoreCard'); 
+let computerScoreCard = document.getElementById('computerScoreCard'); 
+
+playerScoreCard.textContent = `Player's score: ${playerScore}`
+computerScoreCard.textContent = `Computer's score: ${computerScore}`
+
+
+// let playAgainContainer = document.createElement('div'); 
+// document.getElementById("finalWinner").appendChild(playAgainContainer); 
+// let playAgainButton = document.createElement('button'); 
+// playAgainContainer.appendChild(playAgainButton); 
+// playAgainButton.textContent= "Play again?"
+

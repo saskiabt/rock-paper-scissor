@@ -4,23 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet" href="../rock-paper-scissor/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+    </style>
     <title>Rock Paper Scissors</title>
   
 </head>
 <body>
+    <div id = "body">
+        <div class = "content">
+            <div id = "containers">
+                <div id="titleContainer">
+                    <p id="title" class = "rotated">Choose Your Move Below</p>
+                </div>
+                <div id= "buttonsAndResults">
+                    <div id="buttonsContainer">
+                        <button class = "button shrink" id="rock">Rock</button>
+                        <button class = "button shrink" id = "paper">Paper</button>
+                        <button class = "button shrink" id = "scissors">Scissors</button>
+                    </div>
+                    <div id="resultsContainer">
+                        <div id = "selections"></div>
+                        <div id="winnerContainer"></div>
+                    </div>
+                </div>
+                <div id="scoreContainer">
+                    <div id = "playerScoreCard"></div>
+                    <div id = "computerScoreCard"></div>
+                </div>
+                <div id ="finalWinner"></div>
+            </div> 
+            <div class = "footer"></div>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
    
-    <!-- <div class = "player-choice">
-        <label for="choice">Choose Rock, Paper, or Scissors</label>
-        <div class = "dropdown">
-            <select id="rps">
-                <option value="select">---select your move---</option>---Choose Your Move--
-                <option value="rock">Rock</option>
-                <option value ="paper">Paper</option>
-                <option value ="scissors">Scissors</option> -->
-        <!-- </select>
-        </div>
-    </div> --> 
 </body>
 </html> 
