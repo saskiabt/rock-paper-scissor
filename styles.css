@@ -24,7 +24,7 @@ body {
 #header { 
     color: #F7F7F7;
     display: flex;
-    gap: 90px;
+    gap: 75px;
     flex-direction: column;
     padding-bottom: -10 px;
 
@@ -208,7 +208,7 @@ button:hover {
     transform: rotate(-13deg);
     padding-bottom: 15px;
     color: #e4baba;
-    padding-top: 10px;
+    padding-top: 30px;
     margin-left: 40px;
 }
 
