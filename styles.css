@@ -185,8 +185,8 @@ button:hover {
     padding-top: 50px;
     padding-bottom: 50px;
     border-width: 2px;
+    gap: 603px;
     justify-content: center;
-    gap: 722px;
 }
 
 #finalWinner { 
