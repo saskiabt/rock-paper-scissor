@@ -210,7 +210,8 @@ button:hover {
     padding-bottom: 5px;
     color: #fedada;
     padding-top: 0px;
-    margin-left: 50px;
+    margin-left: 60px;
+    font-size: 1.6rem;
     /* color: yellow; */
 }
 
