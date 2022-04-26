@@ -56,6 +56,7 @@ body {
     color: #F7F7F7;
     display: flex;
     flex-direction: row;
+    padding-top: 100px;
 }
 #buttonsContainer { 
     display: flex;
@@ -99,10 +100,11 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     padding: 152px 0px;
+    padding-bottom: 0px;
     font-size: 30px;
     justify-content: center;
     align-items: center;
-
+}
 
 #winnerContainer { 
     display: flex;
@@ -111,6 +113,7 @@ button:hover {
     align-items: center;
     padding-bottom: 50px;
     padding-top: auto;
+    color: burlywood;
 
 }
 
@@ -145,6 +148,7 @@ button:hover {
     padding-left: auto;
     padding-right: auto;
     font-size: 40px;
+    color: yellow;
 }
 
 .playAgainContainer { 
@@ -160,6 +164,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
 }
 
 #finalWinner { 
