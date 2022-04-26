@@ -86,17 +86,17 @@ function playRound(playerSelection) {
         playerSelectionBox.textContent = `You selected 
         ${playerSelection}`
         if (computerSelection === 'scissors') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`
             winnerContainer.textContent = `You win! Rock beats scissors.`
             playerScore ++ ; 
      
         } else if (computerSelection === 'paper') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`
             winnerContainer.textContent = "You Lose! Paper Beats Rock"; 
             computerScore ++ 
          
        } else if (computerSelection === 'rock') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`
             winnerContainer.textContent = "You tied. Play again."
         }
 
@@ -112,16 +112,16 @@ function playRound(playerSelection) {
         playerSelectionBox.textContent = `You selected ${playerSelection}`
 
         if (computerSelection === 'scissors') {
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
             winnerContainer.textContent= 'You Lose! Scissors beats paper'; 
             computerScore ++ ; 
 
         } else if (computerSelection === 'paper') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
             winnerContainer.textContent= 'You tied. Play again.'; 
     
         } else if (computerSelection === 'rock') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
             winnerContainer.textContent= 'You win! Paper beats rock!'; 
             playerScore ++ ; 
         }
@@ -139,11 +139,11 @@ function playRound(playerSelection) {
         if (computerSelection === 'scissors') { 
             winnerContainer.textContent= 'You tied. Play again.'; 
         } else if (computerSelection === 'paper') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
             winnerContainer.textContent= 'You win! Scissors beats paper.'; 
             playerScore ++
         } else if (computerSelection === 'rock') { 
-            computerSelectionBox.textContent = `Computer slection is ${computerSelection}`; 
+            computerSelectionBox.textContent = `Computer selection is ${computerSelection}`; 
             winnerContainer.textContent= 'You lose! Rock beats scissors'; 
             computerScore ++
         }
@@ -159,18 +159,4 @@ function playRound(playerSelection) {
 playRound(); 
 
 
-
-let scoreContainer = document.getElementById('scoreContainer'); 
-let playerScoreCard = document.getElementById('playerScoreCard'); 
-let computerScoreCard = document.getElementById('computerScoreCard'); 
-
-playerScoreCard.textContent = `Player's score: ${playerScore}`
-computerScoreCard.textContent = `Computer's score: ${computerScore}`
-
-
-// let playAgainContainer = document.createElement('div'); 
-// document.getElementById("finalWinner").appendChild(playAgainContainer); 
-// let playAgainButton = document.createElement('button'); 
-// playAgainContainer.appendChild(playAgainButton); 
-// playAgainButton.textContent= "Play again?"
 
