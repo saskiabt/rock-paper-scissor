@@ -104,6 +104,8 @@ function playRound(playerSelection) {
 
         playerScoreCard.textContent = `Player's score: ${playerScore}`
         computerScoreCard.textContent = `Computer's score: ${computerScore}`
+        playerScoreCard.classList.add('growSmall'); 
+        computerScoreCard.classList.add('growSmall'); 
         countScore(); 
     }); 
 
@@ -130,6 +132,8 @@ function playRound(playerSelection) {
         
         playerScoreCard.textContent = `Player's score: ${playerScore}`
         computerScoreCard.textContent = `Computer's score: ${computerScore}`
+        playerScoreCard.classList.add('growSmall'); 
+        computerScoreCard.classList.add('growSmall'); 
         countScore(); 
     }); 
 
@@ -152,6 +156,8 @@ function playRound(playerSelection) {
         }
         playerScoreCard.textContent = `Player's score: ${playerScore}`
         computerScoreCard.textContent = `Computer's score: ${computerScore}`
+        playerScoreCard.classList.add('growSmall'); 
+        computerScoreCard.classList.add('growSmall'); 
         countScore(); 
 
     });

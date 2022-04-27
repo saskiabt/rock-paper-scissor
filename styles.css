@@ -234,3 +234,19 @@ button:hover {
     }
 }
     
+
+.growSmall { 
+    animation: growth 1s;
+    animation-fill-mode: backwards;
+    font-size: 1.3rem;
+    color: palegoldenrod;
+    }
+
+@keyframes growth { 
+    0% { 
+        font-size: 0;
+    }
+    100% { 
+        font-size: 1.3rem;
+    }
+}
