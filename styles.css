@@ -135,6 +135,7 @@ button:hover {
     align-items: center;
     padding-top: auto;
     color: #fedada;
+    font-size: 30px;
 
 }
 
@@ -249,4 +250,12 @@ button:hover {
     100% { 
         font-size: 1.3 rem;
     }
+}
+
+#playerScoreCard { 
+    font-size: 30px;
+}
+
+#computerScoreCard { 
+    font-size:  30px;
 }
