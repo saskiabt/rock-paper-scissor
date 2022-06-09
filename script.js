@@ -44,7 +44,7 @@ function countScore() {
         titleContainer.remove(); 
         buttonsContainer.remove(); 
         resultsContainer.remove();
-        description.remove(); 
+        // description.remove(); 
 
         let playAgainContainer = document.createElement('div'); 
         document.getElementById("finalWinner").appendChild(playAgainContainer); 
@@ -63,7 +63,7 @@ function countScore() {
         titleContainer.remove(); 
         buttonsContainer.remove(); 
         resultsContainer.remove();
-        description.remove(); 
+        // description.remove(); 
 
         let playAgainContainer = document.createElement('div'); 
         document.getElementById("finalWinner").appendChild(playAgainContainer); 
